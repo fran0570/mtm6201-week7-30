@@ -22,9 +22,75 @@
     <div class="logo2 logo"></div>
 
     <h2>Method 4: Making an SVG file using code and embedding it</h2>
-    <img src="images/dice.svg" alt="">
+    <img src="images/dice.svg" alt="code computer generated dice image svg">
 
     <h2>Method 5: Adding SVG code HTML directly</h2>
+
+    <svg class="code-svg" width="200" height="300" viewBox="0 0 200 300">
+    <rect width="200" height="200" fill="#551fd1" rx="8" ry="8"/>
+    <!-- style="fill: #bbf7a2" is the same as just fill="#bbf7a2" -->
+    <circle cx="50" cy="50" r="25" style="fill: #bbf7a2"/>
+    <!-- alt+shift+down arrow to make a copy of above line -->
+    <circle cx="150" cy="50" r="25" style="fill: #bbf7a2"/>
+    <circle cx="150" cy="50" r="25" style="fill: #bbf7a2"/>
+    <circle cx="150" cy="150" r="25" style="fill: #bbf7a2"/>
+    <circle cx="50" cy="150" r="25" style="fill: #bbf7a2"/>
+    </svg>
+
+    <h2>Abstract Art SVG using code HTML</h2>
+    <svg class="abstract" width="200" height="300" viewBox="0 0 200 300">
+        <rect width="200" height="200" fill="#551fd1" rx="8" ry="8"/>
+        <circle cx="50" cy="50" r="25" style="fill: #bbf7a2"/>
+        <ellipse cx="200" cy="50" rx="150" ry="25" fill="#F388E8"/>
+        <line x1="4" y1="4"
+              x2="140" y2="60"
+              stroke="#818ccf"
+              stroke-width="4"/>
+        <polyline points="10,10 10,50 50,50 50,90 90,90" stroke="#ef898b" stroke-width="6" fill="none"/>
+        <polygon class="star" points="253,46.64 293.96,129.63 385.54,142.94 319.27,207.53 334.91,298.74 253,255.68 171.09,298.74 186.73,207.53 120.46,142.94 212.04,129.63 " fill="#b6e2ff"/>   
+        <text x="70"  y="55">Abstract Art</text>    
+    </svg>
+
+    <h2>Grouping inside an SVG</h2>
+    <svg class="group-ex" width="200" height="200" viewBox="0 0 200 200" style="background: #f1f1f1">
+        <line x1="100" y1="100"
+              x2="100" y2="200"
+              stroke="gray"
+              stroke-width="4"/>
+        <polygon class="star" points="253,46.64 293.96,129.63 385.54,142.94 319.27,207.53 334.91,298.74 253,255.68 171.09,298.74 186.73,207.53 120.46,142.94 212.04,129.63 " fill="#b6e2ff"/>
+        <g class="magid" id="magic">
+            <circle cx="100" cy="35" r="6" fill="ED6E446"/>
+            <circle cx="160" cy="90" r="6" fill="ED6E446"/>
+            <circle cx="100" cy="155" r="6" fill="ED6E446"/>
+            <circle cx="40" cy="90" r="6" fill="ED6E446"/>
+        </g>
+
+        <use xlink:href="#magic" x="0" y="0" class="dup-bubbles"/>
+    </svg>
+
+    <h2>We can us the &lt;use element&gt; anywhere on the page </use></h2>
+    <svg width="200" height="200"
+         viewBox="0 0 200 200">
+         <use xlink:href="magic" x="" y="" />
+        
+    </svg>
+    <h2>Ising &lt;def&gt; element to define shapes and the &lt;use&gt; element to render them </h2>
+    <svg width="300" height="200"
+         viewBox="0 0 300 200" style="background: #f1f1f1">
+         <defs>
+            <g id="shape">
+                <rect id="brick" width="200" height="100" fill="#CFBEE1"/>
+                <circle id="ball" r="50" cx="200" cy="50" fill="#8cc9bb"/>
+            </g>
+         </defs>
+         <!-- use will show/display the element on the page using id -->
+        <use xlink:href="#brick" />
+        <use xlink:href="#ball" />
+        <use xlink:href="shape2" />
+        <use xlink:href="shape" x="50" y="0" />
+        <!-- <use class="shape2" xlink:href="#shape" x="100" y="50" /> -->
+    </svg>
+
 
 </body>
 </html>

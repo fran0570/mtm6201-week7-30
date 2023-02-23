@@ -1,12 +1,12 @@
 body{
-    
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1, h2 {
     text-align: center;
 }
 
-img {
+img, svg {
     display: block;
     margin: 0 auto;
 }
@@ -21,4 +21,59 @@ img {
 
 .logo2 {
     background-image: url('../images/smily-outlined.svg');
+}
+
+/* you can see that since code-svg is actully coded inside html you can manipulate it in css and not the
+embed-svg which is considered an image by the html file */
+.code-svg rect, 
+.embed-svg rect {
+    fill: crimson;
+}
+
+.abstract polygon {
+    transform: scale(0.3) translate(70px, 90px);
+    fill: coral;
+}
+
+.abstract text {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    /* color will not work with svg we use fill
+    color: white; */
+    fill: white;
+}
+
+.group-ex .star {
+    transform-origin: center;
+    transform: translate(-45px, -30px) scale(0.3);
+    fill: goldenrod;
+}
+
+
+.group-ex .magic {
+    transition: all 0.5s ease;
+    transform-origin: 95px 45px;
+}
+
+/* .group-ex circle:hover circle {
+    transform: rotate(2turn);
+} */
+
+.group-ex:hover circle {
+    transform: rotate(2turn);
+}
+
+.group-ex:hover .magic {
+    transform: rotate(2turn);
+    
+}
+
+.dup-bubbles {
+    transform-origin: center;
+    transform: rotate(45deg);
+}
+
+.shape2 {
+    transform: rotate(180deg);
+    transform-origin: center;
 }

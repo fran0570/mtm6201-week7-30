@@ -1,11 +1,18 @@
 <!-- Creating an svg file from scratch -->
 <!-- 1. with svg snippet extention installed type svg-svg then press enter 
 to get svg starter code  -->
-<!-- viewBox is like the canvas from ilustrator -->
+<!-- viewBox is like the canvas from illustrator -->
 <!-- svg use xml and use self closing tags -->
-<svg width="200" height="300"
+<svg class="embed-svg" width="200" height="300"
     viewBox="" version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #f1f1f1;">
     <rect x="100" y="" width="200" height="200" fill="#551fd1" rx="8" ry="8" style=""/>
+    <!-- style="fill: #bbf7a2" is the same as just fill="#bbf7a2" -->
+    <circle cx="50" cy="50" r="25" style="fill: #bbf7a2"/>
+    <!-- alt+shift+down arrow to make a copy of above line -->
+    <circle cx="150" cy="50" r="25" style="fill: #bbf7a2"/>
+    <circle cx="150" cy="50" r="25" style="fill: #bbf7a2"/>
+    <circle cx="150" cy="150" r="25" style="fill: #bbf7a2"/>
+    <circle cx="50" cy="150" r="25" style="fill: #bbf7a2"/>
 </svg>
