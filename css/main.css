@@ -1,0 +1,11 @@
+.logo {
+    width: 20rem;
+    height: 20rem;
+    /* background: gray; */
+    background-image: url('img/star.svg');
+    margin: 0 auto;
+}
+
+.logo2 {
+    background-image: url('../img/star-outlined.svg');
+}
