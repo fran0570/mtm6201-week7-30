@@ -84,6 +84,8 @@ embed-svg which is considered an image by the html file */
     fill: url(#mygradient);
 }
 
+/* This is used when the user selects a dark color scheme from your site or 
+activate/sync with the users operating system preference */
 @media screen and (prefers-color-scheme: dark) {
     body {
         background: #212121;
